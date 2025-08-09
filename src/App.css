@@ -1,41 +1,116 @@
 /* Bags Store Styles */
 .bags-store-container {
   min-height: 100vh;
-  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  width: 100vw;
   font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* Playful flower background pattern */
+  background:
+    repeating-linear-gradient(120deg, #fff6f9 0px, #ffe066 400px, #ffb6b9 800px),
+    url('https://www.transparenttextures.com/patterns/flowers.png');
+  background-size: cover, 300px 300px;
+  background-repeat: repeat;
+}
+
+/* Flower background accents */
+.bags-store-container::before {
+  content: "🌸 🌼 🌺 🌷 🌻";
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 3.5rem;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+.bags-store-container::after {
+  content: "🌸 🌼 🌺 🌷 🌻";
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 3.5rem;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .bags-hero {
   text-align: center;
-  padding: 3rem 1rem 2rem 1rem;
-  background: linear-gradient(90deg, #ffe066 0%, #ffd700 100%);
-  color: #333;
-  border-radius: 0 0 2rem 2rem;
-  box-shadow: 0 4px 24px 0 rgba(255, 224, 102, 0.2);
+  padding: 4rem 2rem 3rem 2rem;
+  background: linear-gradient(90deg, #ffb6b9 0%, #ffe066 100%);
+  color: #14213d;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(255, 182, 185, 0.18);
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.bags-hero::before {
+  content: "🌸🌼";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2.5rem;
+  opacity: 0.3;
+  z-index: 1;
+}
+.bags-hero::after {
+  content: "🌷🌺";
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  opacity: 0.3;
+  z-index: 1;
+}
+.bags-hero::before {
+  content: "🌸";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  opacity: 0.4;
+}
+.bags-hero::after {
+  content: "🌼";
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  opacity: 0.4;
 }
 .bags-title {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  letter-spacing: 2px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+  color: #14213d;
+  text-shadow: 0 2px 8px #ffe06699;
 }
 .bags-subtitle {
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #14213d;
+  font-weight: 600;
 }
 .bags-cta {
   display: inline-block;
   padding: 1rem 2.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #333;
-  background: linear-gradient(90deg, #ffd700 0%, #ffe066 100%);
+  color: #fff;
+  background: linear-gradient(90deg, #d72660 0%, #ffb6b9 100%);
   border: none;
   border-radius: 2rem;
-  box-shadow: 0 4px 24px 0 rgba(255, 224, 102, 0.3);
+  box-shadow: 0 4px 24px 0 rgba(255, 182, 185, 0.3);
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
   text-decoration: none;
+  margin-top: 1rem;
 }
 .bags-cta:hover {
   background: linear-gradient(90deg, #6a5af9 0%, #f857a6 100%);
@@ -43,66 +118,117 @@
 }
 
 .bags-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
   padding: 3rem 2rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  position: relative;
 }
 .bag-card {
-  background: #fff;
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 16px 0 rgba(31, 38, 135, 0.13);
-  padding: 1.5rem 1rem 2rem 1rem;
+  background: #fff6f9;
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px 0 rgba(255, 182, 185, 0.13);
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.3s, rotate 0.3s;
+  border: 2px solid #ffb6b9;
+  position: relative;
+  overflow: hidden;
+  min-width: 260px;
+  max-width: 320px;
+  margin: 1.5rem;
+}
+.bag-card::before {
+  content: "🌸";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 1.5rem;
+  opacity: 0.18;
+  z-index: 0;
+}
+.bag-card::after {
+  content: "🌼";
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  opacity: 0.18;
+  z-index: 0;
 }
 .bag-card:hover {
-  box-shadow: 0 8px 32px 0 rgba(106, 90, 249, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(255, 182, 185, 0.28);
+  transform: scale(1.08) rotate(-2deg);
+  z-index: 2;
+}
+/* Staggered effect for cards */
+.bag-card:nth-child(odd) {
+  transform: rotate(-2deg) translateY(10px);
+}
+.bag-card:nth-child(even) {
+  transform: rotate(2deg) translateY(-10px);
+}
+.bag-card:nth-child(3n) {
+  transform: rotate(-3deg) translateX(10px);
 }
 .bag-img {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(106, 90, 249, 0.08);
+  box-shadow: 0 2px 12px rgba(255, 182, 185, 0.12);
+  border: 3px solid #ffe066;
 }
 .bag-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #14213d;
 }
 .bag-price {
   font-size: 1.1rem;
-  color: #6a5af9;
+  color: #14213d;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 .bag-buy {
-  padding: 0.7rem 2rem;
-  font-size: 1rem;
+  padding: 0.8rem 2.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #fff;
-  background: linear-gradient(90deg, #6a5af9 0%, #f857a6 100%);
+  color: #14213d;
+  background: linear-gradient(90deg, #d72660 0%, #ffb6b9 100%);
   border: none;
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 8px 0 rgba(106, 90, 249, 0.13);
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px 0 rgba(255, 182, 185, 0.13);
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
+  position: relative;
+  z-index: 1;
+}
+.bag-buy::after {
+  content: " 🌸";
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
 }
 .bag-buy:hover {
-  background: linear-gradient(90deg, #f857a6 0%, #6a5af9 100%);
-  transform: scale(1.05);
+  background: linear-gradient(90deg, #ffb6b9 0%, #d72660 100%);
+  transform: scale(1.07);
 }
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .logo {
