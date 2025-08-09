@@ -8,10 +8,10 @@
 .bags-hero {
   text-align: center;
   padding: 3rem 1rem 2rem 1rem;
-  background: linear-gradient(90deg, #6a5af9 0%, #f857a6 100%);
-  color: #fff;
+  background: linear-gradient(90deg, #ffe066 0%, #ffd700 100%);
+  color: #333;
   border-radius: 0 0 2rem 2rem;
-  box-shadow: 0 4px 24px 0 rgba(106, 90, 249, 0.1);
+  box-shadow: 0 4px 24px 0 rgba(255, 224, 102, 0.2);
 }
 .bags-title {
   font-size: 3rem;
@@ -28,11 +28,11 @@
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #fff;
-  background: linear-gradient(90deg, #f857a6 0%, #6a5af9 100%);
+  color: #333;
+  background: linear-gradient(90deg, #ffd700 0%, #ffe066 100%);
   border: none;
   border-radius: 2rem;
-  box-shadow: 0 4px 24px 0 rgba(106, 90, 249, 0.3);
+  box-shadow: 0 4px 24px 0 rgba(255, 224, 102, 0.3);
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
   text-decoration: none;
